@@ -12,6 +12,8 @@ class Customer(User):
 
     def place_order(self,item):
         print(f"{self.username} has ordered {item}.")
+    def display(self):
+        print(f"{self.username} from customer class")    
 
 customer_1=Customer("A","abc@gmail.com")
 customer_1.login()
@@ -25,6 +27,8 @@ class Subscriber:
     def apply_premium_discount(self,price):
         final_price=price*(1-self.discount_rate)    
         print(f"Subscribers discount applied ! New price:{final_price}")
+    def display(self):
+        print(f"{self.subscription_status}from Subscriber class")   
 
 class ProCustomer(Customer, Subscriber):
     def __init__(self,username,email,loyalty_points=0):
@@ -38,3 +42,4 @@ vip1.login()
 vip1.place_order("Laptop")
 vip1.apply_premium_discount(40000)
 vip1.show_dashboard()
+vip1.display()

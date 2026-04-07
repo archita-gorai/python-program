@@ -1,10 +1,10 @@
 class A:
     def greet(self):
         print("Hello from A")
-class B:
+class B(A):
     def greet(self):
         print("HEllo from B")
-class C:
+class C(A):
     def greet(self):
         print("HEllo from C")                
 class D(B,C):

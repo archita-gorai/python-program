@@ -10,4 +10,6 @@ class C(A):
 class D(B,C):
     pass
 a=D()
-a.greet()    
+a.greet() 
+A.greet(a)
+super(B,a).greet()
